@@ -1,22 +1,17 @@
-  
 pragma solidity ^0.4.23;
 
 contract Patientcentricaccesscontrol  {
-
 address public patient;
 string public imagedescription; 
 string patientimagehash;
 string Patientpubkey;                                                  
 
- 
+//mappings
 mapping (address=> bool) public recordList;//addresses of requestor and results (true or false)
 mapping (address => bool) public approvedIRs; // result for approved address of IR (true or false)
 mapping(address=>string) public imageHashes; // used to map requester address with imagehash
   
-
-
 //constructor
-
 function Patientcentricaccesscontrol() {
     imagedescription = "Liver Ultrasound Image - B-Mode";
     patient= msg.sender;
@@ -44,8 +39,7 @@ function Patientcentricaccesscontrol() {
     event AuthorizationSuccess(address requester,string info, address patient);
     event AuthorizationFailed(address requester,string info, address patient);
     
-    
-    //functions
+//functions
     function Createcontract()Onlypatient{
        ContractCreated(msg.sender, "Requests can be accepted based on contract patient, Notes: Contract patient"); //Defining contract by patient 1 for example
        }
