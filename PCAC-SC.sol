@@ -28,7 +28,7 @@ function Patientcentricaccesscontrol() {
         _;
     }
     
-    //events
+ //events
     event ContractCreated(address owner, string info);
     event RequestedForApproval(address requester, string info);    
     event Requestaccepted(address patient , string info);
@@ -42,18 +42,15 @@ function Patientcentricaccesscontrol() {
 //functions
     function Createcontract()Onlypatient{
        ContractCreated(msg.sender, "Requests can be accepted based on contract patient, Notes: Contract patient"); //Defining contract by patient 1 for example
-       }
+  }
     
   function Requestaccess(address patientAddress, string notes, string IRpublickey) Notpatient  {
-        
-        RequestedForApproval(msg.sender, "Agreed with contract. Usage:Purpose");
+  RequestedForApproval(msg.sender, "Agreed with contract. Usage:Purpose");
     }
     
  
 function ApproveIR( address requesterAddress, string imageHash) Onlypatient public {
-    
-    imageHashes[requesterAddress] = imageHash; //update the mapping
-    
+  imageHashes[requesterAddress] = imageHash; //update the mapping 
   if(keccak256(imageHashes[requesterAddress]) == keccak256(patientimagehash)) //compare hashes to validate authorization
   {
       Requestaccepted(msg.sender, "approved by patient. ");
@@ -72,8 +69,8 @@ function ApproveIR( address requesterAddress, string imageHash) Onlypatient publ
 
 function RemoveIR(address requesterAddress, string imageHash) public {
     require(msg.sender == patient); 
-     imageHashes[requesterAddress] = imageHash;
-      if(keccak256(imageHashes[requesterAddress]) == keccak256(patientimagehash))
+    imageHashes[requesterAddress] = imageHash;
+     if(keccak256(imageHashes[requesterAddress]) == keccak256(patientimagehash))
       {
       UserRemoved(msg.sender, "removed");
       recordList[requesterAddress] = false;
