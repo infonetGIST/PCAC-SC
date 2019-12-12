@@ -40,16 +40,16 @@ function Patientcentricaccesscontrol() {
     event AuthorizationFailed(address requester,string info, address patient);
     
 //functions
-    function Createcontract()Onlypatient{
+    function Create_contract()Onlypatient{
        ContractCreated(msg.sender, "Requests can be accepted based on contract patient, Notes: Contract patient"); //Defining contract by patient 1 for example
   }
     
-  function Requestaccess(address patientAddress, string notes, string IRpublickey) Notpatient  {
+  function Request_access(address patientAddress, string notes, string IRpublickey) Notpatient  {
   RequestedForApproval(msg.sender, "Agreed with contract. Usage:Purpose");
     }
     
  
-function ApproveIR( address requesterAddress, string imageHash) Onlypatient public {
+function Approve_IRs( address requesterAddress, string imageHash) Onlypatient public {
   imageHashes[requesterAddress] = imageHash; //update the mapping 
   if(keccak256(imageHashes[requesterAddress]) == keccak256(patientimagehash)) //compare hashes to validate authorization
   {
@@ -67,7 +67,7 @@ function ApproveIR( address requesterAddress, string imageHash) Onlypatient publ
   }
 }
 
-function RemoveIR(address requesterAddress, string imageHash) public {
+function Remove_IRs(address requesterAddress, string imageHash) public {
     require(msg.sender == patient); 
     imageHashes[requesterAddress] = imageHash;
      if(keccak256(imageHashes[requesterAddress]) == keccak256(patientimagehash))
@@ -78,7 +78,7 @@ function RemoveIR(address requesterAddress, string imageHash) public {
       Reason(requesterAddress, " Contract expired");
       }
 }
-function Traceauthorization( address requesterAddress, address patientAddress ) public {
+function Trace_authorization( address requesterAddress, address patientAddress ) public {
  if(recordList[requesterAddress] == true && approvedIRs[requesterAddress] == true )
     if(patientAddress == patient) {
         //event showing image access is verified by the patient 
