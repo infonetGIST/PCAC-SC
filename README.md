@@ -9,7 +9,7 @@ Reference paper title: Mohamed Yaseen Jabarulla and Heung-No Lee, "Blockchain-Ba
 
 Last version: Dec. 12, 2019.
 
-Code List
+Functions
 
 1.create_contract(): this function is created and executed only by a patient to issue corre-sponding roles for Image requestors (IRs) and related information for accessing medical images.
 
