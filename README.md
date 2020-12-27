@@ -5,4 +5,4 @@ CODE INFORMATION
 
 Reference paper title: Mohamed Yaseen Jabarulla and Heung-No Lee, "Blockchain-Based Distributed Patient-Centric Image Management System"
 
-Last version: Feb. 07, 2020.
+Last version: Dec. 12, 2019.
