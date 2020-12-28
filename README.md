@@ -9,7 +9,7 @@ Reference paper title: Mohamed Yaseen Jabarulla and Heung-No Lee, "Blockchain-Ba
 
 Last version: Dec. 12, 2019.
 
-Functions
+FUNCTIONS
 
 1.create_contract(): this function is created and executed only by a patient to issue corre-sponding roles for Image requestors (IRs) and related information for accessing medical images.
 
@@ -29,5 +29,5 @@ Key links for Experimental Setup:
 
 Key links used for Evaluation:
 
-1. Anonymized free medical Dicom images - https://www.dicomlibrary.com/
-2. PostDICOM - https://www.postdicom.com/
+1. Anonymized free medical DICOM images - https://www.dicomlibrary.com/
+2. PostDICOM cloud PACS - https://www.postdicom.com/
