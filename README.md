@@ -23,7 +23,7 @@ FUNCTIONS
 
 Key links for Experimental Setup:
 
-1. Remix IDE (Enviroment: Injected Web3) - https://remix.ethereum.org/
+1. Remix IDE (Environment: Injected Web3) - https://remix.ethereum.org/
 2. Rinkeby test network using metamask for chrome - https://metamask.io/download.html
 3. initialize IPFS using go-ipfs - https://github.com/ipfs/go-ipfs
 
