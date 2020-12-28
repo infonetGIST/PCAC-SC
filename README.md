@@ -21,3 +21,13 @@ Functions
 
 5.remove_IRs(): this function takes the approved IRs blockchain address as input and removes IRs from SC upon successful execution of a function by the patient.
 
+Key links for Experimental Setup:
+
+1. Remix IDE (Enviroment: Injected Web3) - https://remix.ethereum.org/
+2. Rinkeby test network using metamask for chrome - https://metamask.io/download.html
+3. initialize IPFS using go-ipfs - https://github.com/ipfs/go-ipfs
+
+Key links used for Evaluation:
+
+1. Anonymized free medical Dicom images - https://www.dicomlibrary.com/
+2. PostDICOM - https://www.postdicom.com/
